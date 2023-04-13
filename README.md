@@ -18,21 +18,16 @@ All possible combinations of selected factors were tested 1000 times to produce 
     * Total number of samples
     * Number of response levels
     * Convergence criteria for the genetic algorithm  
-    * Note: Each run automatically tests across all combinations for number of slices, ratio of known data, and underlying slice data distributions  
+    * Note: Each run automatically tests across all combinations for number of slices, ratio of known data, and underlying slice data distributions, and outputs the results for MAE data and stats data to the current working directory   
 * run_Simulations.sh - example bash script for running R simulation script, used to send tests to a cluster  
     * Note: The bash script provided contains 16 runs, ensuring that all runs were sent to the same node for accurate comparison of running time when analyzing varying total number of samples. The results for this script are located within stats_data/sameNode. The results solely within stats_data are for all parameter combinations and were obtained by 1 run per bash script, allowing for analysis and comparison of error summary statistics but not running time.  
-* supplemental_plots.pdf - plots containing distributions for MAE error as a percent of dataset size, and plots containing distributions for MAE improvement by the GA over ordinal regression, for all factor combinations tested  
-The  are located within the folder labeled MAEData. Selected factors included the following:  
-* MAE Data
-* For users looking to generate a predesigned layer file of ToxPi profiles with Python, or users who are unsure, see [Method 1](#method-1-toxpi_creationpy--toxpi_creation_customizedpy).  
+* SupplementalPlots.pdf - plots containing distributions for MAE error as a percent of dataset size, and plots containing distributions for MAE improvement by the GA over ordinal regression, for all factor combinations tested  
 
-* For users looking to use an ArcGIS Toolbox(e.g., for integration into existing ArcGIS workflows), see [Method 2](#method-2-toxpitoolboxtbx).  
 
-* For users looking to see example walkthroughs, see the vignettes in [Examples](./Examples/).  
 
-* For users looking to visualize existing maps, see [Visualizations](./Examples/Visualizations.md).  
 
-* For users requiring help with data manipulation and formatting requirements, see [Utilities](./Utilities/).  
+
+
 
 <a id="ToxPi-Description"></a>
 
