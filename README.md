@@ -10,9 +10,10 @@ Simulation studies were run on several different models with varying data to exp
 * Number of response levels - (2, 3, 4)  
 * Underlying slice data distributions - (Normal, Gamma, Uniform, Mixed)  
 
-All possible combinations of selected factors were tested 1000 times to produce an empirical error distribution for each combination. All methods and results are located within the folder labeled simulation_studies. Information within the folder:
-* MAEData - inidividual error results for every trial and every combination
-* statsData - 
+All possible combinations of selected factors were tested 1000 times to produce an empirical error distribution for each combination. All methods and results are located within the folder labeled simulation_studies. Information within the folder:  
+* MAEData - inidividual error results for every trial and every combination  
+* stats_data - some summary statistics for distributions of error and running time  
+* 
 The  are located within the folder labeled MAEData. Selected factors included the following:  
 * MAE Data
 * For users looking to generate a predesigned layer file of ToxPi profiles with Python, or users who are unsure, see [Method 1](#method-1-toxpi_creationpy--toxpi_creation_customizedpy).  
