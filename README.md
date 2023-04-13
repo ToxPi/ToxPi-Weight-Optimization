@@ -20,7 +20,7 @@ All possible combinations of selected factors were tested 1000 times to produce 
     * Convergence criteria for the genetic algorithm  
     * Note: Each run automatically tests across all combinations for number of slices, ratio of known data, and underlying slice data distributions, and outputs the results for MAE data and stats data to the current working directory   
 * run_Simulations.sh - example bash script for running R simulation script, used to send tests to a cluster  
-    * Note: The bash script provided contains 16 runs, ensuring that all runs were sent to the same node for accurate comparison of running time when analyzing varying total number of samples. The results for this script are located within stats_data/sameNode. The results solely within stats_data are for all parameter combinations and were obtained by 1 run per bash script, allowing for analysis and comparison of error summary statistics but not running time.  
+    * Note: The bash script provided contains 16 runs, ensuring that all runs were sent to the same node for accurate comparison of running time when analyzing varying total number of samples. The results for this script are located within stats_data/runningTime_sameNode. The results solely within stats_data are for all parameter combinations and were obtained by 1 run per bash script, allowing for analysis and comparison of error summary statistics but not running time.  
 * SupplementalPlots.pdf - plots containing distributions for MAE error as a percent of dataset size, and plots containing distributions for MAE improvement by the GA over ordinal regression, for all factor combinations tested. These are provided to users for expected error measurements based on their model complexity.  
 
 
