@@ -14,12 +14,14 @@ Simulation studies were run on several different models with varying data to exp
 All possible combinations of selected factors were tested 1000 times to produce an empirical error distribution for each combination. All methods and results are located within the folder labeled simulation_studies. Information within the folder:  
 * MAEData - inidividual error results for every trial and every combination  
 * stats_data - some summary statistics for distributions of error and running time  
-* GA_WithSimulationSetup - script for running simulation study for a specified set of factors, takes in 3 ordered parameters for parallelization:    
+* GA_WithSimulationSetup.R - R script for running simulation study for a specified set of factors, takes in 3 ordered parameters for parallelization:    
     * Total number of samples
     * Number of response levels
     * Convergence criteria for the genetic algorithm  
     * Note: Each run automatically tests across all combinations for number of slices, ratio of known data, and underlying slice data distributions  
-* 
+* run_Simulations.sh - example bash script for running R simulation script, used to send tests to a cluster  
+    * Note: The bash script provided contains 16 runs, ensuring that all runs were sent to the same node for accurate comparison of running time when analyzing varying total number of samples. The results for this script are located within stats_data/sameNode. The results solely within stats_data are for all parameter combinations and were obtained by 1 run per bash script, allowing for analysis and comparison of error summary statistics but not running time.  
+* supplemental_plots.pdf - plots containing distributions for MAE error as a percent of dataset size, and plots containing distributions for MAE improvement by the GA over ordinal regression, for all factor combinations tested  
 The  are located within the folder labeled MAEData. Selected factors included the following:  
 * MAE Data
 * For users looking to generate a predesigned layer file of ToxPi profiles with Python, or users who are unsure, see [Method 1](#method-1-toxpi_creationpy--toxpi_creation_customizedpy).  
