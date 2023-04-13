@@ -1,8 +1,20 @@
 # ToxPi Weight Optimization: Guided Optimization of ToxPi Model Weights using a Semi-Automated Approach  
 ## **GitHub Directory:**  
-The following scripts and data are used to explore and recreate results from Fleming et al, Guided Optimization of ToxPi Model Weights using a Semi-Automated Approach. To run weight optimization on your own data, please see the toxpiR package upon deployment of version 2.0.  
+The following scripts and data are used to explore and recreate results from Fleming et al, Guided Optimization of ToxPi Model Weights using a Semi-Automated Approach. The results can be used to explore the expected error of weight optimization based on user model complexity. To run weight optimization on your own data, please see the toxpiR package upon deployment of version 2.0.  
 
-### 
+### Simulation Studies:   
+Simulation studies were run on several different models with varying data to explore the estimated error of weight estimation based on model complexity. The selected factors to test model complexity based on common use cases were as follows:  
+* Number of slices - (3, 6, 9, 12, 15)  
+* Ratio defining number of samples with prior response knowledge compared to number of slices - (3x, 6x, 9x, 12x, 15x)  
+* Total number of samples - (500, 1000, 5000, 10000)  
+* Number of response levels - (2, 3, 4)  
+* Underlying slice data distributions - (Normal, Gamma, Uniform, Mixed)  
+
+All possible combinations of selected factors were tested 1000 times to produce an empirical error distribution for each combination. All methods and results are located within the folder labeled simulation_studies. Information within the folder:
+* MAEData - inidividual error results for every trial and every combination
+* statsData - 
+The  are located within the folder labeled MAEData. Selected factors included the following:  
+* MAE Data
 * For users looking to generate a predesigned layer file of ToxPi profiles with Python, or users who are unsure, see [Method 1](#method-1-toxpi_creationpy--toxpi_creation_customizedpy).  
 
 * For users looking to use an ArcGIS Toolbox(e.g., for integration into existing ArcGIS workflows), see [Method 2](#method-2-toxpitoolboxtbx).  
