@@ -7,43 +7,6 @@ library(ggplot2)
 #set working directory, likely change to downloads
 setwd("G:/Other computers/My Laptop/ReifResearch/Dissertation/OptiPi/Github/uvcb_analysis")
 
-################ Create Required Functions ###################################
-TestWeights <- function(w,data, knownData,slicenames){
-  
-  #determine the scores of all profiles using the proposed weights
-  score <- rowSums(data[,slicenames]*w[col(data[,slicenames])])
-  testData <- cbind(data,score)
-  
-  #sort the data based on new scores
-  testData <- testData[order(testData[,'score'], decreasing = TRUE),]
-  
-  #determine the rank and bins of "known" profiles using the proposed weights
-  NoSamples <- nrow(data)
-  index <- c(1:NoSamples)
-  testData <- cbind(testData, index)
-  testData <- cbind(testData, )
-  testKnowns <- testData[testData[,'id'] %in% knownData[,'id'],]
-  
-  #get fitness of weights based on deviation of bins*indices from bin for known profiles
-  deviation <- 0
-  for(i in 1:noKnown){
-    id <- testKnowns[i,'id']
-    trueBin <- knownData[knownData[,'id'] == id,'bins']
-    observedBin <- testKnowns[testKnowns[,'id'] == id,'bins']
-    observedRank <- testKnowns[testKnowns[,'id'] == id,'index']
-    if(trueBin < observedBin){
-      binDist <- abs(BinRanks[trueBin+1] - observedRank - 1)
-    } else if(trueBin > observedBin){
-      binDist <- BinRanks[trueBin] - observedRank
-    } else {
-      binDist <- 0
-    }
-    #deviation <- deviation + abs(trueBin - observedBin)
-    deviation <- deviation + abs(trueBin - observedBin)*binDist
-  }
-  return(deviation)
-}
-
 ########## Prepare user data as would be used for GA ###########################
 #load in true ranking results
 toxpi_results <- read.csv("qcpheno.out_results.csv")
