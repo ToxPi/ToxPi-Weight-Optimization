@@ -4,7 +4,7 @@ library(grid)
 library(dplyr)
 
 #set desired directory, likely downloads
-#setwd("Downloads/ToxPi-Weight-Estimation-main")
+#setwd("Downloads/ToxPi-Weight-Estimation")
 
 #load in MAE data for varying convergence
 load('simulation_studies/stats_data/stats50Converge3Bins500SamplesV2.rdata')

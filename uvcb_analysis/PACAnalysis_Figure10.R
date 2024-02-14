@@ -5,7 +5,7 @@ library(dplyr)
 library(ggplot2)
 
 #set working directory, likely change to downloads
-#setwd("G:/Other computers/My Laptop/ReifResearch/Dissertation/OptiPi/Github/uvcb_analysis")
+#setwd("Downloads/ToxPi-Weight-Optimization")
 
 ########## Prepare user data as would be used for GA ###########################
 #load in true ranking results

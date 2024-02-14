@@ -4,7 +4,7 @@ library(grid)
 library(dplyr)
 
 #set desired directory, likely downloads
-#setwd("Downloads/ToxPi-Weight-Optimization-main")
+#setwd("Downloads/ToxPi-Weight-Optimization")
 
 ################# plot MAE distributions ####################################
 #load in changing ratio and changing # slices data

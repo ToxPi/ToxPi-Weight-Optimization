@@ -4,7 +4,7 @@ library(grid)
 library(dplyr)
 
 #change this to desired directory, likely downloads
-#setwd("G:/Other computers/My Laptop/ReifResearch/Dissertation/OptiPi/Github")
+#setwd("Downloads/ToxPi-Weight-Optimization")
 
 ################# plot MAE Diff distributions ####################################
 #load in data for consistent convergence limit, number of response levels, and number of samples
